@@ -13,8 +13,8 @@ const forecast=(long,lat,callback)=>{
         callback(Error.info,undefined)
     }
     else{
-        const {weather_descriptions,temperature,feelslike}=current
-        callback(undefined,weather_descriptions[0]+". It is curently "+temperature+" degrees out. It feels like "+ feelslike+" degrees out.")   
+        const {weather_descriptions,temperature,feelslike,humidity}=current
+        callback(undefined,weather_descriptions[0]+". It is curently "+temperature+"°C. It feels like it is"+ feelslike+" °C. The humidity is "+humidity)   
     }
 })
 }
