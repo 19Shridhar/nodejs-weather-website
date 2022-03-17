@@ -5,6 +5,7 @@ const express=require('express')
 const hbs=require('hbs')
 
 const app=express()
+const port=process.env.PORT || 3000
 
 //Define path foe express js
 const publicdir=path.join(__dirname,'../public')
@@ -91,6 +92,6 @@ app.get('*',(req,res)=>{
         title:'404'
     })
 })
-app.listen(3000,()=>{
-    console.log('Running')
+app.listen(port,()=>{
+    console.log('Running on '+port)
 })
